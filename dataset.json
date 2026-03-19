@@ -1,0 +1,11 @@
+[
+  {
+    "task": "Write a Python function that parses an AWS S3 bucket ARN and extracts the bucket name. The function should take an ARN string like 'arn:aws:s3:::my-bucket-name' and return just 'my-bucket-name'."
+  },
+  {
+    "task": "Create a JSON object representing an AWS IAM policy that allows read-only access to a specific S3 bucket named 'company-logs'. The policy should include the necessary Effect, Action, and Resource fields."
+  },
+  {
+    "task": "Write a regex pattern that validates AWS EC2 instance IDs. The pattern should match strings that start with 'i-' followed by either 8 or 17 hexadecimal characters (to support both old and new instance ID formats)."
+  }
+]
