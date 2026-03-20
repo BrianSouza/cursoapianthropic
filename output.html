@@ -1,0 +1,359 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Prompt Evaluation Report</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                line-height: 1.6;
+                margin: 0;
+                padding: 20px;
+                color: #333;
+            }
+            .header {
+                background-color: #f0f0f0;
+                padding: 20px;
+                border-radius: 5px;
+                margin-bottom: 20px;
+            }
+            .summary-stats {
+                display: flex;
+                justify-content: space-between;
+                flex-wrap: wrap;
+                gap: 10px;
+            }
+            .stat-box {
+                background-color: #fff;
+                border-radius: 5px;
+                padding: 15px;
+                box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+                flex-basis: 30%;
+                min-width: 200px;
+            }
+            .stat-value {
+                font-size: 24px;
+                font-weight: bold;
+                margin-top: 5px;
+            }
+            table {
+                width: 100%;
+                border-collapse: collapse;
+                margin-top: 20px;
+            }
+            th {
+                background-color: #4a4a4a;
+                color: white;
+                text-align: left;
+                padding: 12px;
+            }
+            td {
+                padding: 10px;
+                border-bottom: 1px solid #ddd;
+                vertical-align: top;
+            }
+            tr:nth-child(even) {
+                background-color: #f9f9f9;
+            }
+            .output-cell {
+                white-space: pre-wrap;
+            }
+            .score {
+                font-weight: bold;
+                padding: 5px 10px;
+                border-radius: 3px;
+                display: inline-block;
+            }
+            .score-high {
+                background-color: #c8e6c9;
+                color: #2e7d32;
+            }
+            .score-medium {
+                background-color: #fff9c4;
+                color: #f57f17;
+            }
+            .score-low {
+                background-color: #ffcdd2;
+                color: #c62828;
+            }
+            .output {
+                overflow: auto;
+                white-space: pre-wrap;
+            }
+
+            .output pre {
+                background-color: #f5f5f5;
+                border: 1px solid #ddd;
+                border-radius: 4px;
+                padding: 10px;
+                margin: 0;
+                font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+                font-size: 14px;
+                line-height: 1.4;
+                color: #333;
+                box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+                overflow-x: auto;
+                white-space: pre-wrap; 
+                word-wrap: break-word; 
+            }
+
+            td {
+                width: 20%;
+            }
+            .score-col {
+                width: 80px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="header">
+            <h1>Prompt Evaluation Report</h1>
+            <div class="summary-stats">
+                <div class="stat-box">
+                    <div>Total Test Cases</div>
+                    <div class="stat-value">3</div>
+                </div>
+                <div class="stat-box">
+                    <div>Average Score</div>
+                    <div class="stat-value">7.0 / 10</div>
+                </div>
+                <div class="stat-box">
+                    <div>Pass Rate (≥7)</div>
+                    <div class="stat-value">100.0%</div>
+                </div>
+            </div>
+        </div>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Scenario</th>
+                    <th>Prompt Inputs</th>
+                    <th>Solution Criteria</th>
+                    <th>Output</th>
+                    <th>Score</th>
+                    <th>Reasoning</th>
+                </tr>
+            </thead>
+            <tbody>
+    
+            <tr>
+                <td>Teste com cliente iniciante com múltiplas restrições físicas (lesão de joelho, dor crônica nas costas) e preferência por exercícios em casa com equipamento mínimo, buscando ganho de força funcional</td>
+                <td class="prompt-inputs"><strong>Altura:</strong> 172<br><strong>Peso:</strong> 78<br><strong>Idade:</strong> 45<br><strong>Objetivo:</strong> Ganhar força funcional com restrições de lesão de joelho e dor crônica nas costas, exercícios em casa com equipamento mínimo</td>
+                <td class="criteria">• O plano inclui exercícios seguros que evitam impacto no joelho e sobrecarga na coluna lombar<br>• Todos os exercícios propostos são realizáveis em casa com equipamento mínimo ou peso corporal<br>• O plano desenvolve força funcional e é progressivo para iniciantes</td>
+                <td class="output"><pre># Programa de Treino Adaptado
+
+## 📋 Avaliação Inicial
+Para esse perfil, recomendo:
+- **IMC**: 26,4 (sobrepeso leve) → trabalhar composição corporal
+- **Prioridade**: Estabilidade de tronco + força funcional sem sobrecarregar joelhos e costas
+
+---
+
+## 💪 Exercícios Recomendados
+
+### **AQUECIMENTO (5-10 min)**
+- Caminhada no lugar com elevação de joelhos (controlada)
+- Rotação de tronco leve
+- Mobilidade de quadril em 4 apoios
+
+### **NÚCLEO - Força Funcional** (3x semana)
+
+| Exercício | Sets | Reps | Notas |
+|-----------|------|------|-------|
+| **Prancha modificada** | 3 | 20-30s | Joelhos apoiados se necessário |
+| **Ponte de glúteos** | 3 | 12-15 | Fortalece posterior, descarrega coluna |
+| **Quadrupedia com extensão** | 3 | 10/lado | Ativa core + glúteos |
+| **Bird dog** | 3 | 10/lado | Excelente para estabilidade |
+| **Supino no chão** | 3 | 12 | Com halteres ou garrafas |
+
+### **MEMBROS INFERIORES** (cuidado com joelho)
+
+| Exercício | Sets | Reps | Por que |
+|-----------|------|------|---------|
+| **Agachamento na parede** | 3 | 12 | Amplitude controlada |
+| **Step-up baixo** | 3 | 10/lado | Usa apenas 1-2 degraus |
+| **Elevação lateral de perna** | 3 | 15/lado | Glúteo médio, baixo impacto |
+| **Extensão de perna sentado** | 3 | 15 | Com resistência elástica |
+
+### **MEMBROS SUPERIORES**
+
+| Exercício | Sets | Reps | Equipamento |
+|-----------|------|------|-------------|
+| **Rosca bíceps** | 3 | 12-15 | Halteres/garrafas |
+| **Tríceps banco** | 3 | 12 | Próprio peso |
+| **Flexão de parede** | 3 | 8-12 | Menos intenso que chão |
+
+---
+
+## ⚠️ **CONTRAINDICAÇÕES - EVITAR**
+
+❌ Agachamento profundo  
+❌ Leg press  
+❌ Supino com barra pesada  
+❌ Abdominais tradicionais (crunch)  
+❌ Extensão de coluna/hiperextensão  
+❌ Exercícios de salto ou impacto
+
+---
+
+## 🗓️ **Estrutura de Treino**
+
+**Opção A: 3x/semana**
+```
+Seg: Core + MMII
+Qua: Core + MMSS
+Sex: Core + MMII/MMSS misto
+```
+
+**Opção B: 4x/semana**
+```
+Seg/Qui: Core + MMII
+Ter/Sex: Core + MMSS
+```
+
+---
+
+## 🔧 **Progressão Segura**
+
+1. **Semanas 1-2**: Adaptação (6-8 reps, sinta o movimento)
+2. **Semanas 3-4**: Aumentar volume (reps)
+3. **Semanas 5+**: Adicionar resistência (elásticos progressivos)
+
+---
+
+## 💡 **Recomendações Gerais**
+
+✅ **Aquecimento obrigatório** (5-10 min)  
+✅ **Respiração**: Nunca prenda a respiração  
+✅ **</pre></td>
+                <td class="score-col"><span class="score score-medium">7</span></td>
+                <td class="reasoning">A solução atende aos requisitos obrigatórios: os exercícios são seguros e apropriados para a idade (45 anos), peso (78kg) e objetivo (força funcional com restrições). Evita adequadamente impacto no joelho e sobrecarga na coluna. Todos os exercícios são realizáveis em casa com equipamento mínimo. O plano é progressivo e adequado para iniciante. Porém, apresenta deficiências nos critérios secundários por falta de detalhes sobre recuperação, sinais de alerta e uma recomendação potencialmente problemática (extensão de perna) sem contexto suficiente. A solução é sólida mas incompleta em aspectos de segurança avançada.</td>
+            </tr>
+        
+            <tr>
+                <td>Teste com cliente avançado com objetivo específico de hipertrofia muscular, disponibilidade limitada (3 dias por semana), acesso a academia completa e histórico de treino estruturado</td>
+                <td class="prompt-inputs"><strong>Altura:</strong> 180<br><strong>Peso:</strong> 85<br><strong>Idade:</strong> 28<br><strong>Objetivo:</strong> Ganhar massa muscular com foco em hipertrofia, disponível 3 dias por semana</td>
+                <td class="criteria">• O plano inclui 3 sessões semanais estruturadas com divisão de grupos musculares apropriada para hipertrofia<br>• Especifica exercícios compostos e isolados adequados ao nível avançado do cliente<br>• Apresenta progressão de carga e volume de treino compatível com objetivos de ganho muscular<br>• Recomendações são seguras e adaptadas ao perfil do cliente (idade, peso, experiência)</td>
+                <td class="output"><pre># Programa de Hipertrofia - 3 Dias/Semana
+
+## 📊 Análise Rápida
+- **IMC:** 26,2 (sobrepeso leve) → Composição corporal é relevante
+- **Objetivo:** Hipertrofia com treino limitado → Eficiência é essencial
+- **Foco:** Exercícios compostos com alto estímulo muscular
+
+---
+
+## 💪 Estrutura Recomendada (A/B/A ou Push/Pull/Legs)
+
+### **OPÇÃO 1: Divisão PPL (Recomendado)**
+
+**DIA 1 - PUSH (Peito, Ombro, Tríceps)**
+- Supino Reto: 4×6-8
+- Rosca Inclinada: 3×8-10
+- Desenvolvimento Militar: 3×8-10
+- Elevação Lateral: 3×12-15
+- Tríceps Corda: 3×10-12
+
+**DIA 2 - PULL (Costas, Bíceps)**
+- Barra Fixa/Lat Machine: 4×6-8
+- Rosca Direta: 3×8-10
+- Remada Curvada: 3×8-10
+- Rosca Inversa: 3×10-12
+- Encolhimento: 3×12-15
+
+**DIA 3 - LEGS (Pernas)**
+- Agachamento: 4×6-8
+- Leg Press: 3×8-10
+- Cadeira Extensora: 3×10-12
+- Rosca Direta de Perna: 3×10-12
+- Panturrilha: 3×15-20
+
+---
+
+## ⚡ Princípios Importantes
+
+| Aspecto | Recomendação |
+|---------|--------------|
+| **Volume** | 10-20 séries por grupo muscular/semana |
+| **Intensidade** | 65-85% 1RM (deixar 2-3 reps em reserva) |
+| **Descanso** | 60-90s (compostos), 45-60s (isolados) |
+| **Frequência** | 2x/semana por grupo muscular (ideal) |
+
+---
+
+## 🎯 Complementos Essenciais
+
+**Nutrição:**
+- Superávit calórico moderado (+300-500 kcal)
+- Proteína: 1,6-2,2g/kg = **136-187g/dia**
+- Carboidratos: sustentação de energia
+
+**Recuperação:**
+- 7-9 horas de sono
+- Considerar deload a cada 4-6 semanas
+
+---
+
+## ⚠️ Considerações
+
+- Com apenas 3 dias, cada sessão precisa ser **alta qualidade**
+- Aumentar para 4+ dias aceleraria ganhos (ideal seria 4-5 dias)
+- Avaliar composição corporal atual → ajustar déficit/superávit
+
+**Quer ajustar algo? (volume, exercícios específicos, limitações?)**</pre></td>
+                <td class="score-col"><span class="score score-medium">7</span></td>
+                <td class="reasoning">A solução atende aos requisitos obrigatórios ao recomendar exercícios seguros e apropriados para um homem de 28 anos, 85kg, com objetivo de hipertrofia. Os exercícios selecionados (supino, agachamento, rosca, etc.) são amplamente validados e seguros para essa faixa etária e peso. Atende também aos critérios secundários: inclui 3 sessões estruturadas, combina compostos e isolados, apresenta recomendações de volume/intensidade compatíveis com hipertrofia. Porém, há deficiências significativas na personalização: não questiona o nível de experiência do cliente (informação crucial para um personal trainer), não investiga restrições/preferências mencionadas na tarefa original, e não detalha um plano de progressão específico. A solução é sólida tecnicamente mas genérica demais para ser considerada verdadeiramente 'personalizada' conforme exigido na descrição da tarefa.</td>
+            </tr>
+        
+            <tr>
+                <td>Teste com cliente idoso (65+ anos) focado em manutenção de mobilidade e prevenção de quedas, sem experiência anterior com exercícios estruturados e com limitações de equilíbrio</td>
+                <td class="prompt-inputs"><strong>Altura:</strong> 168<br><strong>Peso:</strong> 72<br><strong>Idade:</strong> 67<br><strong>Objetivo:</strong> Manter mobilidade, melhorar equilíbrio e prevenir quedas</td>
+                <td class="criteria">• Plano inclui exercícios de equilíbrio e propriocepção apropriados para idade<br>• Todas as recomendações são seguras para iniciante sem experiência estruturada em exercícios<br>• Plano aborda especificamente prevenção de quedas e manutenção de mobilidade conforme objetivo<br>• Exercícios são adaptados às limitações de equilíbrio mencionadas</td>
+                <td class="output"><pre># Programa de Exercícios para Mobilidade e Prevenção de Quedas
+
+Com base no perfil (67 anos, IMC 25,5 - sobrepeso leve), recomendo:
+
+## 1. **Exercícios de Equilíbrio** (3x/semana)
+- Ficar em pé com apoio unilateral (30-60 seg cada perna)
+- Caminhar em linha reta (calcanhar-ponta)
+- Posição de Romberg (pés juntos, olhos fechados - com segurança)
+- Treino de alcance lateral mantendo equilíbrio
+
+## 2. **Fortalecimento de MMII** (2-3x/semana)
+- Agachamento assistido (cadeira/barras)
+- Levantamento de perna lateral e frontal
+- Subida de degraus com apoio
+- Ponte glútea (para força hip)
+
+## 3. **Mobilidade Articular** (diariamente ou 5x/semana)
+- Alongamentos suaves de quadríceps, glúteos, panturrilha
+- Rotação de quadril e tornozelo
+- Flexibilidade de coluna (com controle)
+
+## 4. **Marcha Funcional** (5x/semana)
+- Caminhada 20-30 minutos em ritmo moderado
+- Variações: mudanças de direção, obstáculos baixos
+
+## 5. **Propriocepção** (3x/semana)
+- Exercícios em superfícies instáveis (almofada, bosu)
+- Progressiva com supervisão
+
+## **Considerações Importantes**
+⚠️ Avaliação médica prévia recomendada  
+⚠️ Uso de suportes/barras em casa  
+⚠️ Progressão gradual  
+⚠️ Acompanhamento profissional
+
+Deseja detalhes sobre algum exercício específico?</pre></td>
+                <td class="score-col"><span class="score score-medium">7</span></td>
+                <td class="reasoning">A solução atende aos requisitos obrigatórios ao recomendar exercícios seguros e apropriados para idade, peso e objetivo. Todos os critérios secundários são parcialmente atendidos: inclui exercícios de equilíbrio/propriocepção, é seguro para iniciante (com ressalvas sobre BOSU), aborda prevenção de quedas e mobilidade, e considera limitações. Porém, há deficiências na investigação de restrições médicas específicas e na estruturação detalhada da progressão, o que reduz a qualidade geral da implementação prática do plano.</td>
+            </tr>
+        
+            </tbody>
+        </table>
+    </body>
+    </html>
+    

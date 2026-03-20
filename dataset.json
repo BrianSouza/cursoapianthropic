@@ -1,11 +1,49 @@
 [
   {
-    "task": "Write a Python function that parses an AWS S3 bucket ARN and extracts the bucket name. The function should take an ARN string like 'arn:aws:s3:::my-bucket-name' and return just 'my-bucket-name'."
+    "prompt_inputs": {
+      "Altura": "172",
+      "Peso": "78",
+      "Idade": "45",
+      "Objetivo": "Ganhar for\u00e7a funcional com restri\u00e7\u00f5es de les\u00e3o de joelho e dor cr\u00f4nica nas costas, exerc\u00edcios em casa com equipamento m\u00ednimo"
+    },
+    "solution_criteria": [
+      "O plano inclui exerc\u00edcios seguros que evitam impacto no joelho e sobrecarga na coluna lombar",
+      "Todos os exerc\u00edcios propostos s\u00e3o realiz\u00e1veis em casa com equipamento m\u00ednimo ou peso corporal",
+      "O plano desenvolve for\u00e7a funcional e \u00e9 progressivo para iniciantes"
+    ],
+    "task_description": " Voc\u00ea \u00e9 personal trainer, seu trabalho \u00e9 criar planos de treino personalizados para seus clientes com base nas informa\u00e7\u00f5es que eles fornecem sobre seus objetivos, n\u00edvel de condicionamento f\u00edsico, restri\u00e7\u00f5es e prefer\u00eancias. Voc\u00ea deve usar as informa\u00e7\u00f5es fornecidas para criar um plano de treino que seja seguro, eficaz e adaptado \u00e0s necessidades individuais de cada cliente. ",
+    "scenario": "Teste com cliente iniciante com m\u00faltiplas restri\u00e7\u00f5es f\u00edsicas (les\u00e3o de joelho, dor cr\u00f4nica nas costas) e prefer\u00eancia por exerc\u00edcios em casa com equipamento m\u00ednimo, buscando ganho de for\u00e7a funcional"
   },
   {
-    "task": "Create a JSON object representing an AWS IAM policy that allows read-only access to a specific S3 bucket named 'company-logs'. The policy should include the necessary Effect, Action, and Resource fields."
+    "prompt_inputs": {
+      "Altura": "180",
+      "Peso": "85",
+      "Idade": "28",
+      "Objetivo": "Ganhar massa muscular com foco em hipertrofia, dispon\u00edvel 3 dias por semana"
+    },
+    "solution_criteria": [
+      "O plano inclui 3 sess\u00f5es semanais estruturadas com divis\u00e3o de grupos musculares apropriada para hipertrofia",
+      "Especifica exerc\u00edcios compostos e isolados adequados ao n\u00edvel avan\u00e7ado do cliente",
+      "Apresenta progress\u00e3o de carga e volume de treino compat\u00edvel com objetivos de ganho muscular",
+      "Recomenda\u00e7\u00f5es s\u00e3o seguras e adaptadas ao perfil do cliente (idade, peso, experi\u00eancia)"
+    ],
+    "task_description": " Voc\u00ea \u00e9 personal trainer, seu trabalho \u00e9 criar planos de treino personalizados para seus clientes com base nas informa\u00e7\u00f5es que eles fornecem sobre seus objetivos, n\u00edvel de condicionamento f\u00edsico, restri\u00e7\u00f5es e prefer\u00eancias. Voc\u00ea deve usar as informa\u00e7\u00f5es fornecidas para criar um plano de treino que seja seguro, eficaz e adaptado \u00e0s necessidades individuais de cada cliente. ",
+    "scenario": "Teste com cliente avan\u00e7ado com objetivo espec\u00edfico de hipertrofia muscular, disponibilidade limitada (3 dias por semana), acesso a academia completa e hist\u00f3rico de treino estruturado"
   },
   {
-    "task": "Write a regex pattern that validates AWS EC2 instance IDs. The pattern should match strings that start with 'i-' followed by either 8 or 17 hexadecimal characters (to support both old and new instance ID formats)."
+    "prompt_inputs": {
+      "Altura": "168",
+      "Peso": "72",
+      "Idade": "67",
+      "Objetivo": "Manter mobilidade, melhorar equil\u00edbrio e prevenir quedas"
+    },
+    "solution_criteria": [
+      "Plano inclui exerc\u00edcios de equil\u00edbrio e propriocep\u00e7\u00e3o apropriados para idade",
+      "Todas as recomenda\u00e7\u00f5es s\u00e3o seguras para iniciante sem experi\u00eancia estruturada em exerc\u00edcios",
+      "Plano aborda especificamente preven\u00e7\u00e3o de quedas e manuten\u00e7\u00e3o de mobilidade conforme objetivo",
+      "Exerc\u00edcios s\u00e3o adaptados \u00e0s limita\u00e7\u00f5es de equil\u00edbrio mencionadas"
+    ],
+    "task_description": " Voc\u00ea \u00e9 personal trainer, seu trabalho \u00e9 criar planos de treino personalizados para seus clientes com base nas informa\u00e7\u00f5es que eles fornecem sobre seus objetivos, n\u00edvel de condicionamento f\u00edsico, restri\u00e7\u00f5es e prefer\u00eancias. Voc\u00ea deve usar as informa\u00e7\u00f5es fornecidas para criar um plano de treino que seja seguro, eficaz e adaptado \u00e0s necessidades individuais de cada cliente. ",
+    "scenario": "Teste com cliente idoso (65+ anos) focado em manuten\u00e7\u00e3o de mobilidade e preven\u00e7\u00e3o de quedas, sem experi\u00eancia anterior com exerc\u00edcios estruturados e com limita\u00e7\u00f5es de equil\u00edbrio"
   }
 ]
