@@ -1,6 +1,6 @@
 # Agente de Growth: Operações (fintech de boleto/Pix parcelado)
 
-Kit para montar um **agente de Growth dentro do app do Claude** (claude.ai, desktop e mobile), sem código: um **Projeto** com instruções e base de conhecimento, mais **3 Skills** que ensinam o agente a executar análises do mesmo jeito sempre.
+Kit para montar um **agente de Growth dentro do app do Claude** (claude.ai, desktop e mobile), sem código: um **Projeto** com instruções e base de conhecimento, mais **4 Skills** que ensinam o agente a executar análises do mesmo jeito sempre.
 
 ```
 agente-growth/
@@ -9,13 +9,18 @@ agente-growth/
 │   └── conhecimento/                  → subir como arquivos do Projeto
 │       ├── glossario.md
 │       ├── north-star-e-metricas.md
-│       └── registro-experimentos.md
+│       ├── registro-experimentos.md
+│       └── questionario-onboarding.md → a gestora responde e sobe no Projeto
 ├── skills/                            → subir em Configurações › Capacidades › Skills
 │   ├── growth-diagnostico-funil/
 │   ├── growth-experimento/            (inclui script de tamanho de amostra e teste A/B)
-│   └── growth-safra-cobranca/         (inclui script de matriz de safras / FPD / Over X)
+│   ├── growth-safra-cobranca/         (inclui script de matriz de safras / FPD / Over X)
+│   └── growth-onboarding-produtor/    (inclui script de funil de ativação / aha moment)
 ├── dist/                              → skills empacotadas (.skill / .zip) prontas para upload
-└── exemplos/parcelas-ficticias.csv    → base 100% fictícia para testar a skill de safras
+└── exemplos/                          → bases 100% fictícias para testar as skills
+    ├── parcelas-ficticias.csv         (safra e cobrança)
+    ├── produtores-ficticios.csv       (onboarding)
+    └── eventos-produtores-ficticios.csv
 ```
 
 ## Instalação (≈ 20 minutos)
@@ -29,12 +34,12 @@ Antes de subir, preencha nos arquivos de `projeto/`:
 ### 2. Criar o Projeto
 1. No Claude, abra **Projetos → Criar projeto**, com o nome "Growth".
 2. Em **Instruções**, cole o conteúdo de `projeto/instrucoes-projeto.md` (a partir da linha "Você é o Analista de Growth...").
-3. Em **Arquivos/Conhecimento**, suba os 3 arquivos de `projeto/conhecimento/`.
+3. Em **Arquivos/Conhecimento**, suba os arquivos de `projeto/conhecimento/`.
 
 ### 3. Instalar as Skills
 1. Confirme que **Execução de código / criação de arquivos** está ativada (Configurações › Capacidades). As skills usam Python para os cálculos.
 2. Em **Configurações › Capacidades › Skills**, faça upload de cada arquivo de `dist/` (um por skill).
-3. Ative as três.
+3. Ative as quatro.
 
 > Em planos Team/Enterprise, um admin pode precisar liberar skills customizadas, ou pode publicá-las para a organização toda.
 
@@ -57,6 +62,7 @@ Dentro do Projeto, experimente:
 | "Quero testar lembrete de WhatsApp no D-2. Quantos contratos preciso e quanto tempo leva?" | experimento |
 | "Anexei a base de parcelas. As safras estão piorando? Algum produtor preocupa?" | safra e cobrança |
 | "A inadimplência caiu esse mês, é real?" | safra e cobrança (efeito mix/maturação) |
+| "Muitos produtores se cadastram e nunca vendem. Onde travam e qual seria nosso aha moment?" | onboarding do produtor |
 
 **Dica:** para os primeiros testes, use uma base **anonimizada**, só com ID do contrato e sem CPF, nome ou contato.
 
@@ -68,5 +74,5 @@ Dentro do Projeto, experimente:
 ## Próximas evoluções
 - Tarefa agendada semanal: "resumo de segunda-feira" com funil, FPD das safras e alertas
 - Skill de análise de reclamações (Reclame Aqui/atendimento) × produtores
-- Skill de growth do lado do produtor (ativação, indicação, expansão de TPV)
+- Skill de expansão e indicação de produtores (TPV, cross-sell de produtos)
 - Conector direto ao data warehouse
